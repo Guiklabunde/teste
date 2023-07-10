@@ -19,6 +19,7 @@ Certifique-se de seguir as etapas abaixo para configurar corretamente o ambiente
 Requisitos:
 
 Wampserver64: Certifique-se de possuir o Wampserver64 instalado em seu sistema. Você pode baixá-lo em: https://sourceforge.net/projects/wampserver/
+Composer: Tenha o composer instalado em sua máquina. Você poderá baixá-lo em: https://getcomposer.org/
 Laravel: Certifique-se de possuir o laravel.
 Node.js: Verifique se o Node.js está instalado em seu sistema. Ele pode ser baixado em: https://nodejs.org.
 Visual Studio Code: Você pode utilizar o Visual Studio Code ou qualquer outro editor de sua preferência.
@@ -33,7 +34,10 @@ Importe o banco de dados "produtos" no phpMyAdmin.
 Executando o Backend:
 
 Abra o Prompt de Comando e navegue até a pasta C:\wamp64\www\backend. *Prefiro abrir a pasta e digitar cmd*.
-No Prompt de Comando, execute o seguinte comando: php artisan serve. Isso iniciará o servidor local do Laravel.
+No Prompt de Comando, execute o seguinte comando: composer install, para instalar os pacotes composer (autolog, etc.).
+Ainda no Prompt, digite o comando: "code ." para abrir o projeto no VSCODE. Copie o arquivo ".env.example" e renomeie para ".env".
+Abra o arquivo ".env" e altere o nome da base de dados, deixe assim: "DB_DATABASE=produtos".
+Novamente no prompt de comando digite "php artisan serve", iniciará o servidor local do Laravel.
 Agora, o backend estará em execução e pronto para atender às solicitações.
 
 Configuração do Frontend:
